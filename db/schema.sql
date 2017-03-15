@@ -1,9 +1,20 @@
-CREATE DATABASE burgers_db; 
-USE burgers_db;
+CREATE DATABASE game_db;
+USE game_db;
 
-CREATE TABLE burgers (
-	id INTEGER(11) AUTO_INCREMENT NOT NULL PRIMARY KEY, 
-	burger_name VARCHAR(100) NOT NULL,  
-	devoured BOOLEAN NOT NULL default false, 
-	dated timestamp
+CREATE TABLE users
+(
+	id int NOT NULL AUTO_INCREMENT,
+	username varchar(255) NOT NULL,
+	email varchar(255) NOT NULL,
+	password_hash varchar(255) NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE scores
+(
+	id int NOT NULL AUTO_INCREMENT,
+	total_score INT NOT NULL,
+	user_id INT NOT NULL, 
+	PRIMARY KEY (id),
+	FOREIGN KEY (user_id) references users(id)
 );

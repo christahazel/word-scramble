@@ -2,18 +2,7 @@ var bcrypt = require('bcryptjs');
 var express = require('express');
 var router  = express.Router();
 var mysql = require('mysql')
-
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-
-  // Your username
-  user: "root",
-
-  // Your password
-  password: "",
-  database: "groupon_db"
-});
+var connection = require('../config/connection.js')
 
 //this is the users_controller.js file
 router.get('/new', function(req,res) {
@@ -26,7 +15,7 @@ router.get('/sign-in', function(req,res) {
 
 router.get('/sign-out', function(req,res) {
   req.session.destroy(function(err) {
-     res.redirect('/coupons')
+     res.redirect('/scores')
   })
 });
 
@@ -49,7 +38,7 @@ router.post('/login', function(req, res) {
               req.session.company = response[0].company;
               req.session.username = response[0].username;
 
-              res.redirect('/coupons');
+              res.redirect('/scores');
             }else{
               res.redirect('/users/sign-in')
             }
@@ -61,6 +50,7 @@ router.post('/create', function(req,res) {
   var query = "SELECT * FROM users WHERE email = ?"
 
   connection.query(query, [ req.body.email ], function(err, response) {
+    console.log(response)
     if (response.length > 0) {
       res.send('we already have an email or username for this account')
     }else{
@@ -68,9 +58,9 @@ router.post('/create', function(req,res) {
       bcrypt.genSalt(10, function(err, salt) {
           //res.send(salt)
           bcrypt.hash(req.body.password, salt, function(err, hash) {            
-            var query = "INSERT INTO users (username, email, password_hash, company) VALUES (?, ?, ?, ?)"
+            var query = "INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)"
 
-            connection.query(query, [ req.body.username, req.body.email, hash, req.body.company ], function(err, response) {
+            connection.query(query, [ req.body.username, req.body.email, hash ], function(err, response) {
 
               req.session.logged_in = true;
 
@@ -82,7 +72,7 @@ router.post('/create', function(req,res) {
                 req.session.user_email = response[0].email;
                 req.session.company = response[0].company;
 
-                res.redirect('/coupons')
+                res.redirect('/scores')
               });
             });
           });

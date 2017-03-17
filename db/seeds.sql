@@ -1,1 +1,1 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ('the jersey shore', true), ('the pavan', false), ('fat sandwich', true);
+-- INSERT INTO burgers (burger_name, devoured) VALUES ('the jersey shore', true), ('the pavan', false), ('fat sandwich', true);

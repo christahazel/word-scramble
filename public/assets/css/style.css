@@ -1,0 +1,15 @@
+/*html{
+	font-family: 'Times New Roman';
+};
+*/
+body{
+	background-image: url("Clouds.mp4");
+	background-color: #00b8d4;
+	font-family: 'Delius Unicase', cursive;
+	font: #ffffff;
+};
+
+div{
+	padding: 2px;
+	border-style: : 13px solid #f48fb1;
+}

@@ -16,13 +16,21 @@ var words = [{
 var randomIndex = words[Math.floor(Math.random() * words.length)];
 //selects word:key to choose random word 
 var randomWord = randomIndex.word; 
-// var puzzle = randomWord;
+var userInput = "";
 
 	function displayWord(){
-		$('#displayWord').html(randomWord);
+		return $('#displayWord').text();
 	}
 
 	displayWord();
+
+	function userGuess(){
+		$('#userGuess').html(userGuess);
+		if (userInput == randomWord[i].answer){
+			return "niIIICEEee!"; 
+		}
+	}
+
 
 var time = 60*1000;
 var timer;

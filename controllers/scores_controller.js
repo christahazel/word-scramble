@@ -30,25 +30,25 @@ router.get('/', function(req,res) {
 
 });
 
-// router.get('/scores', function(req,res) {
-// 	if (req.session.logged_in){
-// 		var query = "SELECT * FROM scores ORDER BY total_score DESC"
+router.get('/scores', function(req,res) {
+	if (req.session.logged_in){
+		var query = "SELECT * FROM scores ORDER BY total_score DESC"
 
-// 		connection.query(query, function(err, scores) {
-// 			res.render('scores/hangman', {
-// 				scores: scores,
-// 				logged_in: req.session.logged_in,
-// 				user_email: req.session.user_email,
-// 				user_id: req.session.user_id,
-// 				username: req.session.username
-// 			});
+		connection.query(query, function(err, scores) {
+			res.render('scores/scores', {
+				scores: scores,
+				logged_in: req.session.logged_in,
+				user_email: req.session.user_email,
+				user_id: req.session.user_id,
+				username: req.session.username
+			});
 
-// 		});
-// 	}else{
-// 		res.redirect('/users/sign-in');
-// 	}
+		});
+	}else{
+		res.redirect('/users/sign-in');
+	}
 	
-// });
+});
 
 // router.get('/quiz', function(req,res) {
 // 	if (req.session.logged_in){

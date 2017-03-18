@@ -14,8 +14,15 @@ var words = [{
 
 //chooses random object from array
 var randomIndex = words[Math.floor(Math.random() * words.length)];
-//selects word key to choose random word 
+//selects word:key to choose random word 
 var randomWord = randomIndex.word; 
+// var puzzle = randomWord;
+
+	function displayWord(){
+		$('#displayWord').html(randomWord);
+	}
+
+	displayWord();
 
 var time = 60*1000;
 var timer;
@@ -49,5 +56,7 @@ $('#container').hide();
 $('#startGame').on('click', function(){
 	countDown();
 	$('#container').show();
-})
+});
+
+
 

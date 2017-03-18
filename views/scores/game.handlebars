@@ -1,8 +1,36 @@
+{{#if logged_in}}
+	{{> game}}
+
+<h1>Out of wOrder</h1>
+
+	<h2>unscramble the letters. submit your best guess and reach the next high score!</h2>
+
 <button id="startGame">START GAME</button>
 
 <div id="container">
 	<div>Time Left: <span id="time"></span> seconds</div>
 
 	<div id="displayQuestion"></div>
+
+
+	<div class="displayWord">
+	  
+	</div>
+
+	<h2>YUM</h2>
+
+	<form class="create-update-form" action="/" method="POST">
+
+	  <div class="form-group">
+	    <label for="guess"> </label>
+	    <input type="text" id="userGuess" name="burger_name">
+	  </div>
+
+
+	  <button type="submit">R U SURE</button>
+	</form>
 </div>
+
+{{/if}}
+
 

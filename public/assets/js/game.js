@@ -17,7 +17,7 @@ var randomIndex = words[Math.floor(Math.random() * words.length)];
 //selects word key to choose random word 
 var randomWord = randomIndex.word; 
 
-var time = 7*1000;
+var time = 60*1000;
 var timer;
 $('#time').text(time/1000);
 
@@ -27,7 +27,7 @@ function countDown(){
 		$('#time').text(time/1000);
 
 		if (time == 0){
-			time = 7 * 1000;
+			time = 60 * 1000;
 			$('#time').text(time/1000);
 
 			randomIndex++;

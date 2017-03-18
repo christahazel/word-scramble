@@ -36,9 +36,9 @@ function countDown(){
 				loadQuestion();
 			}else{
 				clearInterval(timer);
-				alert('put a fork in it');
+				alert('uH-Oh');
 				$("#container").empty();
-				$("#container").html("<p>Finito!</p>");
+				$("#container").html("<p>bYE FELiCIA!</p>");
 			}
 		}
 	}, 1 * 1000);

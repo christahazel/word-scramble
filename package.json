@@ -10,6 +10,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.0",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.1",
     "materialize-css": "^0.98.0",
     "method-override": "^2.3.7",
     "mysql": "^2.13.0"

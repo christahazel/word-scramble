@@ -1,31 +1,35 @@
 {{#if logged_in}}
 	{{> game}}
 
-<h1>Out of wOrder</h1>
+	<div class = "centerMe center-align purple-text text-purple-accent-1">
+		<h1 class="title">Out of wOrder</h1>
 
-	<div id="directions">unscramble the letters. submit your best guess and reach the next high score!</div>
+			<h4 id="directions light-green-text text-light-green-accent-3">unscramble the letters.<br> submit your best guess and reach the next high score!</h4>
+			<br>
+			<br>
+			<button id="startGame">START GAME</button>
+			<br>
+			<br>
+			<div id="container">
+				
+				<div id="timer amber-text text-lighten-4">foCUS!: <span id="time"></span> seconds</div>
 
-<button id="startGame">START GAME</button>
+				<h2 id="displayWord"></h2>
+				  
+			</div>
 
-<div id="container">
-	
-	<div id="timer">foCUS!:  <span id="time"></span> seconds</div>
+			<form class="create-update-form center-align" action="/" method="POST">
 
-	<div id="displayWord"></div>
-	  
-</div>
-
-	<form class="create-update-form" action="/" method="POST">
-
-	  <div class="form-group">
-	    <label for="guess"> </label>
-	    <input type="text" id="userGuess" name="burger_name">
-	  </div>
+			  <div class="form-group">
+			    <label for="guess"> </label>
+			    <input type="text" id="userGuess" name="burger_name">
+			  </div>
 
 
-	  <button type="submit">R U SURE</button>
-	</form>
-</div>
+			  <button type="submit">R U SURE</button>
+			</form>
+		</div>
+	</div>
 
 {{/if}}
 

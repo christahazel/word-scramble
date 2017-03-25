@@ -9,6 +9,30 @@ var words = [{
 	{
 		word: "nnites",
 		answer: "tennis"
+	},
+	{
+		word: "iceju",
+		answer: "juice"
+	},
+	{
+		word: "sfhnoia",
+		answer: "fashion"
+	},
+	{
+		word: "xlygaa",
+		answer: "galaxy"
+	},
+	{
+		word: "ctifansat",
+		answer: "fantastic"
+	},
+	{
+		word: "aeuohpri",
+		answer: "euphoria"
+	},
+	{
+		word: "skco",
+		answer: "sock"
 	}
 ];
 
@@ -19,15 +43,17 @@ var randomWord = randomIndex.word;
 var userInput = "";
 
 	function displayWord(){
-		return $('#displayWord').text();
+		$('#displayWord').html(randomWord);
 	}
 
 	displayWord();
 
 	function userGuess(){
-		$('#userGuess').html(userGuess);
+		$('#userGuess').text(userInput);
 		if (userInput == randomWord[i].answer){
-			return "niIIICEEee!"; 
+			return alert("niIIICEEee!"); 
+		}else{
+			return alert('oh dood..try again');
 		}
 	}
 

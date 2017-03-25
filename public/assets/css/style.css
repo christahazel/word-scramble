@@ -5,11 +5,53 @@
 body{
 	background-image: url("Clouds.mp4");
 	background-color: #00b8d4;
-	font-family: 'Delius Unicase', cursive;
-	font: #ffffff;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	/*font-family: 'Delius Unicase', cursive;*/
+	align-content: center;
+	z-index: 0;
 };
 
 div{
 	padding: 2px;
 	border-style: : 13px solid #f48fb1;
+	color: #ffffff;
+};
+
+.nav-wrapper{
+	background-color: #f48fb1;
+}
+
+.video-container{
+	/*width: auto;
+	height: 100%;*/
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+	}
+	}
+};
+
+#displayWord{ 
+	width
+}
+
+.form-group{
+	width: 250px;
+	align-content: : center;
+}
+
+button {
+    background-color: Transparent;
+    font-size: 36px;
+    color: #76ff03;
+    font-family: "Comic Sans MS";
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }

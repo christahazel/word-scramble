@@ -2,28 +2,31 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-			<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+			
 			<!-- Compiled and minified CSS -->
 		 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 		  	<!--Import Google Icon Font-->
 	        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	        <!--Import materialize.css-->
-	        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-	      	<!--Let browser know website is optimized for mobile-->
 	      	<!-- Latest compiled and minified CSS -->
-	     	<link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
+	     	<!-- <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet"> -->
+	     	<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
       
 			<title>*!~oUt of WOrdER~!*</title>
 	</head>
 	<body>
+
+		<div class="video-container">
+	        <iframe width="853" height="480" src="assets/css/Clouds.mp4" frameborder="0" allowfullscreen></iframe>
+	    </div>
+
 		{{#if logged_in}}
 		<nav>
-			<div class= "nav-wrapper">		
+			<div class= "nav-wrapper center-align">		
 				<a href="/">pLLaY hERRee</a> | <a href="/scores/scores">hiIiiGH sCoRES!</a> | <a href="/users/sign-out" id="sign-out">bOi bYe. ({{this.username}})</a> 
 			</div>	
 		</nav>		      
 
-			<p class="clear"><strong>logged_in:</strong> {{logged_in}} |
+			<p class="clear center-align"><strong>logged_in:</strong> {{logged_in}} |
 			<strong>user_email:</strong> {{user_email}} |
 			<strong>user_id:</strong> {{user_id}} |
 			<strong>username:</strong> {{username}}</p>
@@ -34,10 +37,8 @@
 
 		{{{ body }}}
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
-		<script src="/assets/js/game.js"></script>
 		<!-- Compiled and minified JavaScript -->
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-	</body>
+		<script src="/assets/js/game.js"></script>
 </html>

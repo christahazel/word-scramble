@@ -2,9 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var port = 3000;
-
-var app = express();
+var app = module.exports = express();
 var cookieParser = require('cookie-parser');
 
 var session = require('express-session');
@@ -36,4 +34,5 @@ app.use("/users", usersController);
 app.use("/scores", scoresController);
 
 
+var port = process.env.PORT || 3306;
 app.listen(port);
